@@ -1,0 +1,20 @@
+[
+  {
+    "id": "sleep-cool",
+    "name": "Sleep Cool",
+    "steps": [
+      {
+        "offset_minutes": 0,
+        "state": { "power": true, "temp": 22.0, "fan_speed": "Auto", "mode": "Cool" }
+      },
+      {
+        "offset_minutes": 120,
+        "state": { "power": true, "temp": 24.0, "fan_speed": "Quiet", "mode": "Cool" }
+      },
+      {
+        "offset_minutes": 480,
+        "state": { "power": false, "temp": 24.0, "fan_speed": "Quiet", "mode": "Cool" }
+      }
+    ]
+  }
+]

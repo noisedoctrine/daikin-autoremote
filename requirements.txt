@@ -1,0 +1,5 @@
+fastapi
+uvicorn
+pigpio
+pydantic
+PyYAML>=6.0,<7

@@ -1,0 +1,17 @@
+services:
+  daikin-remote:
+    build: .
+    container_name: daikin-remote
+    restart: unless-stopped
+    ports:
+      - "${DAIKIN_BIND_ADDRESS:-127.0.0.1}:8000:8000"
+    environment:
+      PIGPIO_HOST: "${PIGPIO_HOST:-host.docker.internal}"
+      PIGPIO_PORT: "${PIGPIO_PORT:-8888}"
+      IR_GPIO: "${IR_GPIO:-17}"
+      DAIKIN_API_ADDR: "0.0.0.0:8000"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    labels:
+      icon: "https://raw.githubusercontent.com/CasaOS-AppManagement/CasaOS-AppStore/main/Apps/Daikin/icon.png"
+      title: "Daikin Remote"

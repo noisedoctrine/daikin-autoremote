@@ -1,0 +1,54 @@
+# Private local configuration
+/secrets/*
+!/secrets/README.md
+!/secrets/*.example.yaml
+!/secrets/*.example.env
+!/secrets/.gitkeep
+
+# Runtime data that can contain room names, locations, or routines
+/data/units.json
+/data/profiles.json
+
+# Environment files and local overrides
+.env
+.env.*
+!.env.example
+*.local
+
+# Credentials, keys, and certificates
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+id_rsa*
+id_ed25519*
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Go and C build output
+*.o
+/daikin_ir
+/daikin_remote
+/bin/
+/dist/
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+*.log
+*.tmp
+*.swp
+*~
