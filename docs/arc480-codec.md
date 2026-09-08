@@ -7,7 +7,7 @@
 
 Target: Malaysian 2025 models, `ARC480 (Stateful)` per `docs/plan.md:21` and `ARC480 or similar` per `docs/research.md:15`.
 Status: encode-only hypothesis, not validated against a real remote capture (`README.md:22`).
-Known conflict: public ARC480A5/A14 evidence points at DAIKIN152-style framing (152 bits / 19 bytes single transmission, ~3492/1718 header, ~433 mark, ~1529 one-space, ~25182 gap, translated fan/swing values), which materially differs from the two-frame `11 + 19` layout below. Capture is required before any ARC480 claim.
+Known conflict: public ARC480A5/A14 evidence points at DAIKIN152-style framing (152 bits / 19 bytes single transmission, ~3492/1718 header, ~433 mark, ~1529 one-space, ~25182 gap, translated fan/swing values), which materially differs from the two-frame `11 + 19` layout below. Capture is required before any ARC480 claim. Sources: `src/ir_Daikin.h` maps `ARC480A5 remote (DAIKIN152)` and cites `DaikinHeatpumpARC480A14IR` ([ir_Daikin.h](https://github.com/crankyoldgit/IRremoteESP8266/blob/master/src/ir_Daikin.h)), DAIKIN152 send path is `sendDaikin152` ([ir_Daikin.cpp](https://github.com/crankyoldgit/IRremoteESP8266/blob/master/src/ir_Daikin.cpp)), protocol list entry ([SupportedProtocols.md](https://github.com/crankyoldgit/IRremoteESP8266/blob/master/SupportedProtocols.md)).
 
 ## 1. Packet layout (repo hypothesis, unverified)
 
